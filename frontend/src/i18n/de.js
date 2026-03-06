@@ -1,0 +1,106 @@
+const de = {
+  nav: ["Über mich", "Arbeit", "Kontakt"],
+  navTheme: [
+    "Theme: Spring Standard",
+    "Theme: Darcula (IDE)",
+    "Theme: Terminal Matrix",
+  ],
+  boot: [
+    "Starte PortfolioApplication mit Java 21...",
+    'Kein aktives Profil gesetzt, falle zurück auf "default"',
+    "Tomcat initialisiert auf Port: 8080 (http)",
+    "Ordner node_modules gefunden (1.2GB). Ignoriere Next.js Affinitäten.",
+    "Exponiere 1 Endpoint(s) unter '/actuator'",
+    "PortfolioApplication gestartet in 2.456 Sekunden",
+    "ANWENDUNGSKONTEXT INITIALISIERT. LADE UI...",
+  ],
+  actuator: {
+    status: "Status",
+    uptime: "Uptime",
+    cpu: "CPU Auslastung",
+    mem: "Speicher",
+    threads: "Threads",
+    active: "Aktiv",
+  },
+  hero: {
+    context: "Kontext: AKTIV",
+    subtitle1: "Ich baue skalierbare Enterprise-Systeme,",
+    subtitle2: "orchestriere Microservices und verbinde Abhängigkeiten.",
+    btnWork: "ARBEIT AUSFÜHREN",
+    btnContact: '@POSTMAPPING("/KONTAKT")',
+  },
+  about: {
+    title: "ÜBER_MICH",
+    p1: "Heyoo! Ich heiße Arlon Labalan, bin 21 Jahre alt und arbeite als Backend-Entwickler aus Wien. Mein Schwerpunkt liegt auf der Entwicklung sicherer und leistungsstarker APIs sowie skalierbarer Enterprise-Systeme",
+    p2: "Im Jahr 2025 habe ich die HTL Rennweg mit dem Schwerpunkt Informationstechnologie und der Vertiefung Medientechnik – Webentwicklung erfolgreich abgeschlossen. Während meiner Ausbildung konnte ich bereits praktische Erfahrungen durch zwei Praktika bei Porsche Informatik sammeln.",
+    p3: "In naher Zukunft werde ich eine Vollzeitstelle als Backend-Entwickler antreten, in der ich für die Entwicklung und Wartung verschiedener Microservices verantwortlich sein werde. Gleichzeitig beginne ich im September mein Bachelorstudium, um mein Wissen in Softwareentwicklung und insbesondere in der Backend-Programmierung weiter zu vertiefen.",
+    p4: "In meiner Freizeit programmiere ich viel. Kürzlich habe ich mit der Entwicklung dieses Webportfolios begonnen und meine Diplomarbeit re-engineered, mit Fokus auf eine neue Architektur, bessere Codequalität und gesteigerte Performance.",
+    ymlTitle: "entwickler",
+    ymlEdu: "bildung",
+    ymlDeg: "abschluss",
+    ymlUni: "universitaet",
+    ymlYear: "jahrgang",
+    ymlCert: "zertifizierungen",
+    ymlLang: "sprachen",
+    ymlHint: "Ein kleines Easter Egg für dich!",
+    deps: "DEPENDENCY_TREE",
+    depsJS: "Psst... Ich hab JavaScript eigentlich auch ganz gern.",
+    history: "AUSFÜHRUNGSVERLAUF",
+    exp: [
+      {
+        company: "aus Der Barmherzigen Schwestern",
+        role: "Zivildiener",
+        period: "Juli 2025 — Heute",
+        desc: "Im Rahmen meines Zivildienstes war ich im Patientensupport tätig und habe Patienten während ihres gesamten Krankenhausaufenthalts unterstützt. Dabei habe ich starke Kommunikationsfähigkeiten entwickelt und ein ausgeprägtes Verantwortungsbewusstsein in der Patientenbetreuung erworben.",
+      },
+      {
+        company: "Porsche Informatik GmbH",
+        role: "Praktikant | Software Engineer",
+        period: "Juli 2024 — August 2024",
+        desc: "In meinem zweiten Praktikum bei Porsche habe ich an der Implementierung neuer Features und der Optimierung bestehenden Codes mitgewirkt. Ich war verantwortlich für die Analyse und Behebung verschiedener Softwarefehler sowie für die Erstellung und Durchführung von H2-Datenbankabfragen. Zudem habe ich die Migration auf neue Softwareversionen durchgeführt, um Stabilität, Sicherheit und Performance der Anwendungen sicherzustellen.",
+      },
+      {
+        company: "Porsche Informatik GmbH",
+        role: "Praktikant | Software Engineer",
+        period: "Juli 2023 — August 2023",
+        desc: "Während meines ersten Praktikums bei Porsche habe ich an der Händler-Software Cross 3 gearbeitet und Features mit Angular, Java Spring Boot und PostgreSQL entwickelt. Mein Schwerpunkt lag auf Code-Optimierungen, Verbesserungen im Data Warehouse sowie der Visualisierung und Analyse von Performance-Daten mit Kibana, um die Effizienz und Zuverlässigkeit des Systems zu steigern.",
+      },
+      {
+        company: "HTL Rennweg",
+        role: "Schüler",
+        period: "2020 — 2025",
+        desc: "Ich habe die HTL Rennweg im Zweig Informationstechnologie mit dem Schwerpunkt Medientechnik – Webentwicklung erfolgreich abgeschlossen. Während meiner Ausbildung habe ich mir eine solide Grundlage in Softwareentwicklung, Webtechnologien sowie in der Planung und Umsetzung von IT-Projekten angeeignet. Diese Erfahrungen ermöglichen es mir, praktische Fähigkeiten im Aufbau moderner Webanwendungen zu entwickeln und mein Interesse an Backend-Entwicklung weiter zu vertiefen.",
+      },
+    ],
+  },
+  work: {
+    title: "Bereitgestellte_Microservices",
+    running: "Läuft auf Port 8080",
+    execute: "Ausführen",
+    response: "Server Antwort",
+    registry: "REGISTRY ANSEHEN",
+    projects: [
+      {
+        title: "Persönliches Web Portfolio",
+        desc: "Ein persönliches Web-Portfolio mit React und Tailwind CSS, in dem ich meine Fähigkeiten, Projekte und Backend-Integrationen vorstelle. Es enthält interaktive Elemente, eine terminalähnliche Oberfläche und ein Echtzeit-Dashboard, inspiriert von Actuator.",
+      },
+      {
+        title: "Diplomarbeitsprojekt",
+        desc: "SpecialBond ist ein Softwareprojekt, das im Rahmen meiner Diplomarbeit entwickelt wurde. Es verfügt über ein React-Native-Frontend für mobile Apps und eine REST-API, die ursprünglich mit Express und Prisma implementiert wurde. Die App soll die Kommunikation zwischen Eltern und Pädagogen in Kindergärten verbessern. Inzwischen wird sie re-engineered und mit Spring Boot neu implementiert, um Skalierbarkeit und Wartbarkeit zu erhöhen.",
+      },
+    ],
+  },
+  contact: {
+    p1: "Meine Inbox ist immer offen. Schick mir gerne eine POST-Anfrage oder eine E-Mail, um Projektideen zu besprechen, zusammenzuarbeiten oder einfach über Technik zu plaudern.",
+    btn: "EVENT AUSLÖSEN",
+  },
+  footer: "und vielleicht ein bisschen Node.js",
+  terminal: {
+    help: "Verfügbare Befehle: help, clear, whoami, ls, sudo",
+    whoami: "gast_nutzer",
+    sudo: "Nutzer ist nicht in der sudoers-Datei. Dieser Vorfall wird gemeldet.",
+    notFound: "Befehl nicht gefunden",
+  },
+};
+
+export default de;
