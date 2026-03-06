@@ -1,5 +1,5 @@
 import { Settings, Leaf } from "lucide-react";
-import JsStackEasterEgg from "./jsStackEasterEgg";
+import JsStackEasterEgg from "./EasterEgg";
 
 const DependencyTree = ({ t }) => {
   return (
