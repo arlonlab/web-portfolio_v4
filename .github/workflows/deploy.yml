@@ -19,4 +19,4 @@ jobs:
 
       - name: Run Deploy Script on Hetzner
         run: |
-          ssh -o StrictHostKeyChecking=no deployuser@YOUR_SERVER_IP 'bash -s' < '~/portfolio/deploy.sh'
+          ssh -o StrictHostKeyChecking=no deployuser@YOUR_SERVER_IP 'bash -s' < '/home/deployuser/portfolio/deploy.sh'
