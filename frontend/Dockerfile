@@ -1,11 +1,24 @@
-FROM node:20-alpine AS build
+# Stage 1: Build React app
+FROM node:20-bullseye AS build
+
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm install
+
+# Copy package files for caching
+COPY package*.json ./
+RUN npm ci
+
+# Copy all frontend files
 COPY . .
+
+# Build the React app
 RUN npm run build
 
-FROM nginx:alpine
-COPY --from=build /app/build /usr/share/nginx/html
+# Stage 2: Serve with Nginx
+FROM nginx:stable-alpine
+
+RUN rm -rf /usr/share/nginx/html/*
+
+COPY --from=build /app/dist /usr/share/nginx/html
+
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
