@@ -6,7 +6,7 @@ services:
     build: ./frontend
     container_name: frontend
     expose:
-      - "3000"
+      - "3000:3000"
 
   backend:
     build: ./web-portfolio-api
