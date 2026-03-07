@@ -1,24 +1,32 @@
 # Stage 1: Build React app
 FROM node:20-bullseye AS build
 
+# Arbeitsverzeichnis
 WORKDIR /app
 
-# Copy package files for caching
+# Package-Dateien für Caching kopieren
 COPY package*.json ./
+
+# Dependencies installieren
 RUN npm ci
 
-# Copy all frontend files
+# Restliche Dateien kopieren
 COPY . .
 
-# Build the React app
+# React App bauen
 RUN npm run build
 
-# Stage 2: Serve with Nginx
-FROM nginx:stable-alpine
+# Stage 2: Lightweight Container für Deployment
+FROM node:20-bullseye
 
-RUN rm -rf /usr/share/nginx/html/*
+WORKDIR /app
 
-COPY --from=build /app/dist /usr/share/nginx/html
+# Nur die gebaute App kopieren
+COPY --from=build /app/dist ./build
 
+# React App kann jetzt z. B. über Host-Nginx served werden
+# Interner Port für Proxy
 EXPOSE 3000
-CMD ["nginx", "-g", "daemon off;"]
+
+# Einfach den Container laufen lassen (z. B. für Serven via Express, falls nötig)
+CMD ["npx", "serve", "-s", "build", "-l", "3000"]
